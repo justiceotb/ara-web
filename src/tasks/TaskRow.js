@@ -5,6 +5,8 @@ import {
   global_active_color_100,
   global_warning_color_100
 } from "@patternfly/react-tokens";
+import { Button } from '@patternfly/react-core';
+import ResultModal from "../results/ResultModal";
 
 const Status = ({ status, children }) => {
   const colors = {
@@ -35,6 +37,14 @@ const Statuses = ({ statuses }) => {
           <Status status={status}>{`${statuses[status]} ${status}`}</Status>
         ))}
     </div>
+  );
+};
+
+const TaskResult = ({ result }) => {
+  return (
+      <Button component="a" href={`/results/${result}`} variant="primary">
+          Result
+      </Button>
   );
 };
 
@@ -90,6 +100,7 @@ export default class TaskRow extends Component {
                 <caption>Task results</caption>
                 <thead>
                   <tr>
+                    <th className="pf-u-text-align-center">Details</th>
                     <th className="pf-u-text-align-center">Status</th>
                     <th className="pf-u-text-align-center">Host</th>
                     <th className="pf-u-text-align-center">Started</th>
@@ -100,6 +111,9 @@ export default class TaskRow extends Component {
                 <tbody>
                   {task.results.map(result => (
                     <tr>
+                      <td className="pf-u-text-align-center">
+                        <ResultModal result={result} />
+                      </td>
                       <td
                         data-label="Status"
                         className="pf-u-text-align-center"
