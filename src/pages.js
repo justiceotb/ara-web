@@ -3,3 +3,4 @@ export { default as LoadingPage } from "./layout/LoadingPage";
 export { default as LoginPage } from "./login/LoginPage";
 export { default as PlaybooksPage } from "./playbooks/PlaybooksPage";
 export { default as PlaybookPage } from "./playbooks/PlaybookPage";
+export { default as ResultPage } from "./results/ResultPage";
