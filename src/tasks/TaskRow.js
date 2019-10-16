@@ -127,10 +127,12 @@ export default class TaskRow extends Component {
                         data-label="Started"
                         className="pf-u-text-align-center"
                       >
-                        {new Date(result.started).toUTCString()}
+                        {/* {new Date(result.started).toUTCString()} */}
+                        {new Date(result.started).toLocaleString('en-AU', {dateStyle:'medium', timeStyle:'long', timeZoneName:'short'})}
                       </td>
                       <td data-label="Ended" className="pf-u-text-align-center">
-                        {new Date(result.ended).toUTCString()}
+                        {/* {new Date(result.ended).toUTCString()} */}
+                        {new Date(result.ended).toLocaleString('en-AU', {dateStyle:'medium', timeStyle:'long', timeZoneName:'short'})}
                       </td>
                       <td
                         data-label="Duration"
