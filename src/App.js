@@ -58,6 +58,10 @@ class App extends Component {
                 path="/playbooks/:id"
                 component={Pages.PlaybookPage}
               />
+              <PrivateRoute
+                path="/results/:id"
+                component={Pages.ResultPage}
+              />
               <Route path="/login" component={Pages.LoginPage} />
               <Route component={Pages.Page404} />
             </Switch>
