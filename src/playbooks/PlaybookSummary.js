@@ -193,7 +193,8 @@ export default class Playbook extends Component {
               <Duration>
                 <CalendarAltIcon />
                 <span className="pf-u-ml-sm">
-                  {new Date(playbook.started).toUTCString()}
+                  {/* {new Date(playbook.started).toUTCString()} */}
+                  {new Date(playbook.started).toLocaleString('en-AU', {dateStyle:'full', timeStyle:'long', timeZoneName:'short'})}
                 </span>
               </Duration>
               <Duration>
