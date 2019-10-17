@@ -8,7 +8,7 @@
     "@patternfly/react-core": "^3.16.10",
     "@patternfly/react-icons": "^3.9.2",
     "@patternfly/react-tokens": "^2.5.1",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-json-view": "^1.19.1",
